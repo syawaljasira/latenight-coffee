@@ -1,0 +1,33 @@
+.btn {
+  &-primary {
+    background: var(--color-primary);
+    color: var(--color-light);
+
+    &:hover {
+      background: var(--color-primary-dark);
+      transform: translateY(-2px);
+      box-shadow: 0 8px 24px rgba(var(--color-primary), 0.3);
+    }
+  }
+
+  &-outline {
+    border: 2px solid var(--color-primary);
+    color: var(--color-primary);
+    background: transparent;
+
+    &:hover {
+      background: var(--color-primary);
+      color: var(--color-light);
+    }
+  }
+
+  &-gold {
+    background: var(--color-gold);
+    color: var(--color-primary-dark);
+
+    &:hover {
+      background: var(--color-gold-light);
+      transform: translateY(-2px);
+    }
+  }
+}
