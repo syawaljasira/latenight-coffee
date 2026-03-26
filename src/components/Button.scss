@@ -30,4 +30,17 @@
       transform: translateY(-2px);
     }
   }
+
+  &-outline-white {
+    border: 2px solid color-mix(in oklab, var(--color-light) 50%, transparent);
+    color: var(--color-light);
+    background: transparent;
+
+    &:hover {
+      background: color-mix(in oklab, var(--color-light) 15%, transparent);
+      color: var(--color-light);
+    }
+  }
+
+  // border-2 border-white/40 text-white hover:bg-white/10
 }

@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
-import { Inter, Lora } from "next/font/google";
+import { Inter, DM_Serif_Display } from "next/font/google";
 import "./globals.css";
+import "@/styles/main.scss";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 
@@ -10,9 +11,10 @@ const interSans = Inter({
   display: "swap",
 });
 
-const loraSerif = Lora({
-  variable: "--font-lora",
+const dmSerif = DM_Serif_Display({
+  weight: "400",
   subsets: ["latin"],
+  variable: "--font-dm-serif",
   display: "swap",
 });
 
@@ -30,7 +32,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${interSans.variable} ${loraSerif.variable} h-full antialiased`}
+      className={`${interSans.variable} ${dmSerif.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col">
         <Navbar />

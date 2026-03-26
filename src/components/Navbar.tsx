@@ -1,10 +1,12 @@
 "use client";
 
-import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "motion/react";
-import { FiMenu, FiX } from "react-icons/fi";
-import { NAV_LINKS } from "@/utils/dummyData";
 import { MdNightsStay } from "react-icons/md";
+import { FiMenu, FiX } from "react-icons/fi";
+import { useState, useEffect } from "react";
+
+import { NAV_LINKS } from "@/utils/dummyData";
+import { AnchorButton } from "./Button";
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
@@ -31,7 +33,7 @@ export default function Navbar() {
       animate={{ y: 0 }}
       transition={{ duration: 0.6, ease: "easeOut" }}
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        scrolled ? "bg-[#FAFAF5]/95 backdrop-blur-md shadow-sm py-3" : "py-5"
+        scrolled ? "bg-light/95 backdrop-blur-md shadow-sm py-3" : "py-5"
       }`}
     >
       <div className="max-w-7xl mx-auto px-6 flex items-center justify-between">
@@ -39,7 +41,7 @@ export default function Navbar() {
         <a
           href="#"
           className={`flex items-center gap-2 font-serif text-2xl transition-colors ${
-            scrolled ? "text-primary-dark" : "text-light"
+            scrolled ? "text-primary-dark" : "text-primary"
           }`}
         >
           <MdNightsStay className="text-gold" />
@@ -54,15 +56,21 @@ export default function Navbar() {
               key={link.href}
               href={link.href}
               className={`text-sm font-medium transition-colors hover:text-gold ${
-                scrolled ? "text-dark" : "text-light"
+                scrolled ? "text-dark" : "text-primary"
               }`}
             >
               {link.label}
             </a>
           ))}
-          <a href="#cta" className="btn btn-primary text-sm px-6 py-2.5">
+
+          <AnchorButton
+            theme="primary"
+            href="#cta"
+            className="text-sm px-6 py-2.5"
+            motionProps={{}}
+          >
             Order Now
-          </a>
+          </AnchorButton>
         </div>
 
         {/* Mobile Toggle */}
@@ -84,7 +92,7 @@ export default function Navbar() {
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: "auto" }}
             exit={{ opacity: 0, height: 0 }}
-            className="md:hidden bg-light border-t border-[#EDE6D8] overflow-hidden"
+            className="md:hidden bg-light border-t border-beige overflow-hidden"
           >
             <div className="px-6 py-4 flex flex-col gap-3">
               {NAV_LINKS.map((link) => (
@@ -92,18 +100,20 @@ export default function Navbar() {
                   key={link.href}
                   href={link.href}
                   onClick={() => setMobileOpen(false)}
-                  className="text-[#2C2C2C] font-medium py-2 hover:text-gold transition-colors"
+                  className="text-dark font-medium py-2 hover:text-gold transition-colors"
                 >
                   {link.label}
                 </a>
               ))}
-              <a
+              <AnchorButton
+                theme="primary"
                 href="#cta"
                 onClick={() => setMobileOpen(false)}
-                className="btn btn-primary text-center mt-2"
+                className="text-center mt-2"
+                motionProps={{}}
               >
                 Order Now
-              </a>
+              </AnchorButton>
             </div>
           </motion.div>
         )}

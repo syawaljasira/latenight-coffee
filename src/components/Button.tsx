@@ -1,8 +1,8 @@
-import "./BaseButton.scss";
+import "./Button.scss";
 import React from "react";
 import { motion, MotionProps } from "motion/react";
 
-type themeType = "primary" | "outline" | "gold" | "";
+type themeType = "primary" | "outline" | "gold" | "outline-white" | "";
 
 interface btnPropTypes extends React.ComponentPropsWithoutRef<"button"> {
   children: React.ReactNode;
@@ -29,7 +29,7 @@ interface aPropTypes extends React.ComponentPropsWithoutRef<"a"> {
   children: React.ReactNode;
   theme: themeType;
   href: string;
-  motionProps: MotionProps;
+  motionProps: MotionProps | undefined;
 }
 
 const AnchorButton = (props: aPropTypes) => {

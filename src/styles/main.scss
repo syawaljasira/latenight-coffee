@@ -1,0 +1,55 @@
+.section-label {
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  color: var(--color-gold);
+  font-weight: 600;
+  margin-bottom: 12px;
+}
+
+.section-title {
+  font-size: clamp(28px, 4vw, 42px);
+  font-family: var(--font-serif);
+  color: var(--color-primary-dark);
+  margin-bottom: 16px;
+  line-height: 1.2;
+}
+
+.section-desc {
+  color: var(--color-lighten);
+  font-size: 16px;
+  line-height: 1.7;
+  max-width: 560px;
+}
+
+.flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.glass-card {
+  background: rgba(var(--color-light), 0.07);
+  border: 1px solid rgba(var(--color-light), 0.1);
+  border-radius: var(--radius-2xl);
+  backdrop-filter: blur(10px);
+}
+
+.card-hover {
+  transition: var(--transition-property-base);
+  &:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 16px 40px rgba(0, 0, 0, 0.1);
+  }
+}
+// === ICON BOX ===
+.icon-box {
+  width: auto;
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  background: var(--color-cream);
+  border-radius: var(--radius-xl);
+}

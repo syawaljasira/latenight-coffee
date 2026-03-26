@@ -1,9 +1,10 @@
 "use client";
 
-import { FiCoffee, FiInstagram, FiTwitter, FiFacebook } from "react-icons/fi";
+import { FiInstagram, FiTwitter, FiFacebook } from "react-icons/fi";
 import { SiTiktok } from "react-icons/si";
 import { FOOTER_LINKS, SOCIAL_LINKS } from "@/utils/dummyData";
 import moment from "moment";
+import { MdNightsStay } from "react-icons/md";
 
 const SOCIAL_ICON_MAP: Record<string, React.ReactNode> = {
   instagram: <FiInstagram />,
@@ -14,7 +15,7 @@ const SOCIAL_ICON_MAP: Record<string, React.ReactNode> = {
 
 export default function Footer() {
   return (
-    <footer className="bg-[#4A3425] text-white pt-16 pb-8">
+    <footer className="bg-primary-dark text-white pt-16 pb-8">
       <div className="max-w-7xl mx-auto px-6">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-12 mb-14">
           {/* Brand */}
@@ -23,8 +24,8 @@ export default function Footer() {
               href="#"
               className="flex items-center gap-2 font-serif text-xl mb-4"
             >
-              <FiCoffee className="text-[#C8A96E]" />
-              Kopi Nusantara
+              <MdNightsStay className="w-5 h-5 text-gold" />
+              Late Night Coffee
             </a>
             <p className="text-white/55 text-sm leading-relaxed mb-6">
               Crafting exceptional coffee from ethically sourced beans across
@@ -37,7 +38,7 @@ export default function Footer() {
                   href={link.href}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-10 h-10 bg-white/10 rounded-xl flex items-center justify-center text-[#C8A96E] hover:bg-[#C8A96E] hover:text-white transition-all"
+                  className="w-10 h-10 bg-white/10 rounded-xl flex items-center justify-center text-gold hover:bg-gold hover:text-white transition-all"
                   aria-label={link.label}
                 >
                   {SOCIAL_ICON_MAP[link.icon]}
@@ -48,15 +49,13 @@ export default function Footer() {
 
           {/* Explore */}
           <div>
-            <h4 className="font-serif text-base mb-5 text-[#C8A96E]">
-              Explore
-            </h4>
+            <h4 className="font-serif text-base mb-5 text-gold">Explore</h4>
             <div className="flex flex-col gap-3">
               {FOOTER_LINKS.explore.map((link) => (
                 <a
                   key={link.href}
                   href={link.href}
-                  className="text-sm text-white/55 hover:text-[#C8A96E] transition-colors"
+                  className="text-sm text-white/55 hover:text-gold transition-colors"
                 >
                   {link.label}
                 </a>
@@ -66,15 +65,13 @@ export default function Footer() {
 
           {/* Support */}
           <div>
-            <h4 className="font-serif text-base mb-5 text-[#C8A96E]">
-              Support
-            </h4>
+            <h4 className="font-serif text-base mb-5 text-gold">Support</h4>
             <div className="flex flex-col gap-3">
               {FOOTER_LINKS.support.map((link) => (
                 <a
                   key={link.href}
                   href={link.href}
-                  className="text-sm text-white/55 hover:text-[#C8A96E] transition-colors"
+                  className="text-sm text-white/55 hover:text-gold transition-colors"
                 >
                   {link.label}
                 </a>
@@ -84,13 +81,13 @@ export default function Footer() {
 
           {/* Legal */}
           <div>
-            <h4 className="font-serif text-base mb-5 text-[#C8A96E]">Legal</h4>
+            <h4 className="font-serif text-base mb-5 text-gold">Legal</h4>
             <div className="flex flex-col gap-3">
               {FOOTER_LINKS.legal.map((link) => (
                 <a
                   key={link.href}
                   href={link.href}
-                  className="text-sm text-white/55 hover:text-[#C8A96E] transition-colors"
+                  className="text-sm text-white/55 hover:text-gold transition-colors"
                 >
                   {link.label}
                 </a>
@@ -102,7 +99,7 @@ export default function Footer() {
         {/* Divider & Copyright */}
         <div className="border-t border-white/10 pt-6 text-center">
           <p className="text-xs text-white/40">
-            © {moment().year()} Kopi Nusantara. All rights reserved.
+            © {moment().year()} Late Night Coffee. All rights reserved.
           </p>
         </div>
       </div>

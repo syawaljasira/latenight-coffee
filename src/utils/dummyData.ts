@@ -19,6 +19,7 @@ export interface IAboutFeature {
   icon: string;
   title: string;
   description: string;
+  img: string;
 }
 
 export const ABOUT_FEATURES: IAboutFeature[] = [
@@ -26,16 +27,19 @@ export const ABOUT_FEATURES: IAboutFeature[] = [
     icon: "leaf",
     title: "Ethically Sourced",
     description: "Direct trade with local farmers from Aceh to Flores",
+    img: "/assets/icon/coffee-leaves.png",
   },
   {
     icon: "fire",
     title: "Freshly Roasted",
     description: "Small-batch roasting in-house every single morning",
+    img: "/assets/icon/beans.png",
   },
   {
     icon: "heart",
     title: "Made with Care",
     description: "Every drink is handcrafted by our skilled baristas",
+    img: "/assets/icon/coffee.png",
   },
 ];
 
@@ -59,29 +63,29 @@ export const MENU_CATEGORIES: { key: MenuCategory; label: string }[] = [
 
 export const MENU_ITEMS: IMenuItem[] = [
   {
-    name: "Caramel Macchiato",
+    name: "Cappuccino",
     description:
-      "Velvety espresso meets buttery caramel, topped with silky steamed milk and a drizzle of house-made caramel.",
+      "A harmonious balance of rich espresso, steamed milk, and velvety milk foam.",
     price: "45K",
-    image: "/images/menu/caramel-macchiato.jpg",
+    image: "/assets/menu/cappuccino.png",
     tag: "★ Best Seller",
     category: "signature",
   },
   {
-    name: "Nusantara Cold Brew",
+    name: "Ice Late Night Coffee",
     description:
-      "18-hour slow-steeped Gayo beans with hints of dark chocolate and a smooth, clean finish.",
+      "Freshly brewed medium-roast coffee, cooled and served over ice with a splash of milk and subtle sweetness.",
     price: "40K",
-    image: "/images/menu/cold-brew.jpg",
+    image: "/assets/menu/ice-coffee.png",
     tag: "✦ House Special",
     category: "signature",
   },
   {
-    name: "Matcha Oat Latte",
+    name: "Green Matcha Latte",
     description:
-      "Ceremonial-grade matcha whisked with creamy oat milk, lightly sweetened with organic honey.",
+      "Ceremonial-grade matcha whisked with creamy milk, lightly sweetened with organic honey.",
     price: "48K",
-    image: "/images/menu/matcha-latte.jpg",
+    image: "/assets/menu/matcha.png",
     tag: "🌿 Vegan Friendly",
     category: "signature",
   },
@@ -90,7 +94,7 @@ export const MENU_ITEMS: IMenuItem[] = [
     description:
       "48-hour fermented dough, baked fresh every morning with French butter.",
     price: "35K",
-    image: "/images/menu/croissant.jpg",
+    image: "/assets/menu/croissant.png",
     tag: "🥐 Fresh Daily",
     category: "pastries",
   },
@@ -99,7 +103,7 @@ export const MENU_ITEMS: IMenuItem[] = [
     description:
       "Moist, perfectly spiced banana bread with walnuts, served warm with butter.",
     price: "30K",
-    image: "/images/menu/banana-bread.jpg",
+    image: "/assets/menu/banana-bread.png",
     tag: "🍌 Homemade",
     category: "pastries",
   },
@@ -108,7 +112,7 @@ export const MENU_ITEMS: IMenuItem[] = [
     description:
       "Classic Italian tiramisu layered with espresso-soaked ladyfingers and mascarpone cream.",
     price: "45K",
-    image: "/images/menu/tiramisu.jpg",
+    image: "/assets/menu/tiramisu.png",
     tag: "🍰 Chef's Pick",
     category: "pastries",
   },
@@ -117,7 +121,7 @@ export const MENU_ITEMS: IMenuItem[] = [
     description:
       "A seasonal favorite — warm espresso blended with real pumpkin purée and autumn spices.",
     price: "50K",
-    image: "/images/menu/pumpkin-latte.jpg",
+    image: "/assets/menu/pumpkin-latte.png",
     tag: "🎃 Limited Edition",
     category: "seasonal",
   },
@@ -126,7 +130,7 @@ export const MENU_ITEMS: IMenuItem[] = [
     description:
       "Refreshing lychee-infused tea with a hint of rose syrup, served over crushed ice.",
     price: "42K",
-    image: "/images/menu/lychee-rose.jpg",
+    image: "/assets/menu/lychee-rose.png",
     tag: "🌸 Summer Special",
     category: "seasonal",
   },
@@ -135,7 +139,7 @@ export const MENU_ITEMS: IMenuItem[] = [
     description:
       "Rich mocha with gingerbread spice, topped with whipped cream and a gingerbread cookie.",
     price: "52K",
-    image: "/images/menu/gingerbread.jpg",
+    image: "/assets/menu/gingerbread.png",
     tag: "🎄 Holiday Special",
     category: "seasonal",
   },
@@ -175,21 +179,44 @@ export const USP_ITEMS: IUspItem[] = [
   },
 ];
 
+export interface IGalleryItems {
+  url: string;
+  description: string;
+  space: boolean;
+}
+
 // === GALLERY ===
-export const GALLERY_IMAGES = [
+export const GALLERY_IMAGES: IGalleryItems[] = [
   {
-    src: "/images/gallery/interior-1.jpg",
-    alt: "Cozy interior with warm lighting",
-    span: true,
+    url: "/assets/gallery/img-1.png",
+    description: "Cozy interior with warm lighting",
+    space: true,
   },
-  { src: "/images/gallery/coffee-pour.jpg", alt: "Barista pouring latte art" },
-  { src: "/images/gallery/barista.jpg", alt: "Our skilled barista at work" },
   {
-    src: "/images/gallery/latte-art.jpg",
-    alt: "Beautiful latte art",
-    span: true,
+    url: "/assets/gallery/img-2.png",
+    description: "Barista pouring latte art",
+    space: false,
   },
-  { src: "/images/gallery/pastries.jpg", alt: "Fresh pastries display" },
+  {
+    url: "/assets/gallery/img-3.png",
+    description: "Our skilled barista at work",
+    space: false,
+  },
+  {
+    url: "/assets/gallery/img-4.png",
+    description: "Beautiful latte art",
+    space: false,
+  },
+  {
+    url: "/assets/gallery/img-5.png",
+    description: "Fresh pastries display",
+    space: false,
+  },
+  {
+    url: "/assets/gallery/img-6.png",
+    description: "Fresh pastries display",
+    space: true,
+  },
 ] as const;
 
 // === TESTIMONIALS ===
@@ -204,7 +231,7 @@ export const TESTIMONIALS: ITestimonial[] = [
   {
     quote:
       "The best oat milk latte I've ever had in Jakarta. The ambience is perfect for remote working. I basically live here now!",
-    name: "Rina Wijaya",
+    name: "Catherine Wijaya",
     source: "Google Review",
     initial: "R",
   },
@@ -218,7 +245,7 @@ export const TESTIMONIALS: ITestimonial[] = [
   {
     quote:
       "Love how they source directly from local farmers. It's great coffee with a great story behind it. Highly recommended!",
-    name: "Maya Chen",
+    name: "Sarah Maulida",
     source: "Food Blogger",
     initial: "M",
   },
@@ -226,38 +253,38 @@ export const TESTIMONIALS: ITestimonial[] = [
 
 // === LOCATION ===
 export const STORE_INFO = {
-  address: "Jl. Senopati No. 12, Kebayoran Baru",
-  city: "Jakarta Selatan 12190",
+  address: "Jl. Panglima Polim V Selatan No.6, Melawai, Kebayoran Baru",
+  city: "Jakarta Selatan 12160",
   phone: "+62 812 3456 7890",
-  email: "hello@kopinusantara.id",
+  email: "hello@latenightcoffee.id",
   hours: {
     weekday: { open: "07:00", close: "22:00", label: "Mon — Fri" },
     weekend: { open: "08:00", close: "23:00", label: "Sat — Sun" },
   },
   mapEmbedUrl:
-    "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.2!2d106.8!3d-6.24!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1",
+    "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7932.284118059777!2d106.79489714418504!3d-6.24500271141361!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69f15f0d75ccbb%3A0x673681e728003a2b!2sWarkopolim!5e0!3m2!1sid!2sid!4v1774521969898!5m2!1sid!2sid",
 } as const;
 
 // === SOCIAL LINKS ===
 export const SOCIAL_LINKS = [
   {
     label: "Instagram",
-    href: "https://instagram.com/kopinusantara",
+    href: "https://instagram.com/latenightcoffee.id",
     icon: "instagram",
   },
   {
     label: "Twitter",
-    href: "https://twitter.com/kopinusantara",
+    href: "https://twitter.com/latenightcoffee.id",
     icon: "twitter",
   },
   {
     label: "Facebook",
-    href: "https://facebook.com/kopinusantara",
+    href: "https://facebook.com/latenightcoffee.id",
     icon: "facebook",
   },
   {
     label: "TikTok",
-    href: "https://tiktok.com/@kopinusantara",
+    href: "https://tiktok.com/@latenightcoffee.id",
     icon: "tiktok",
   },
 ] as const;
