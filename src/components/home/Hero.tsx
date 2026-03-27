@@ -32,7 +32,7 @@ const Hero = () => {
             </motion.div>
           </div>
 
-          <div className="w-full sm:w-6/12 h-full">
+          <div className="w-full sm:w-6/12 h-auto">
             <Image
               src="/assets/hero/bg5.png"
               alt="Late Night Coffee"
