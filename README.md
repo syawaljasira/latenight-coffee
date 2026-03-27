@@ -52,7 +52,7 @@ Late Night Coffee landing page showcases a premium coffee shop brand with:
 ### Prerequisites
 
 - Node.js 18.17 or later
-- npm / yarn / pnpm
+- npm
 
 ### Installation
 
@@ -66,7 +66,7 @@ cd latenight-coffee
 2. Install dependencies:
 
 ```bash
-npm install
+npm install --legacy-peer-deps
 ```
 
 1. Run the development server:
