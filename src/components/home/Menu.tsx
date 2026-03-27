@@ -20,7 +20,6 @@ const Menu = () => {
   return (
     <section id="menu" className="w-full py-20 lg:py-28 bg-cream">
       <div className="max-w-7xl mx-auto px-6">
-        {/* Header */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -35,7 +34,7 @@ const Menu = () => {
             over years of passion.
           </p>
         </motion.div>
-        {/* Tabs */}
+
         <div className="flex justify-center gap-3 mb-12 flex-wrap">
           {MENU_CATEGORIES.map((cat) => (
             <button
@@ -51,7 +50,7 @@ const Menu = () => {
             </button>
           ))}
         </div>
-        {/* Grid */}
+
         <AnimatePresence mode="wait">
           <motion.div
             key={activeCategory}

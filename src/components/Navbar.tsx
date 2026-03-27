@@ -4,6 +4,7 @@ import { motion, AnimatePresence } from "motion/react";
 import { MdNightsStay } from "react-icons/md";
 import { FiMenu, FiX } from "react-icons/fi";
 import { useState, useEffect } from "react";
+import Link from "next/link";
 
 import { NAV_LINKS } from "@/utils/dummyData";
 import { AnchorButton } from "./Button";
@@ -11,6 +12,18 @@ import { AnchorButton } from "./Button";
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
+
+  const handleNavScroll = (id: string) => {
+    const target = document.getElementById(id);
+    if (!target) return;
+
+    const targetPosition =
+      target.getBoundingClientRect().top + window.pageYOffset;
+    window.scrollTo({
+      top: targetPosition,
+      behavior: "smooth",
+    });
+  };
 
   useEffect(() => {
     const handleScroll = () => setScrolled(window.scrollY > 50);
@@ -37,22 +50,20 @@ export default function Navbar() {
       }`}
     >
       <div className="max-w-7xl mx-auto px-6 flex items-center justify-between">
-        {/* Logo */}
-        <a
+        <Link
           href="#"
           className={`flex items-center gap-2 font-serif text-2xl transition-colors ${
             scrolled ? "text-primary-dark" : "text-primary"
           }`}
         >
           <MdNightsStay className="text-gold" />
-          {/* <FiCoffee className="text-gold" /> */}
           Late Night Coffee
-        </a>
+        </Link>
 
         {/* Desktop Nav */}
         <div className="hidden md:flex items-center gap-8">
           {NAV_LINKS.map((link) => (
-            <a
+            <Link
               key={link.href}
               href={link.href}
               className={`text-sm font-medium transition-colors hover:text-gold ${
@@ -60,7 +71,7 @@ export default function Navbar() {
               }`}
             >
               {link.label}
-            </a>
+            </Link>
           ))}
 
           <AnchorButton
@@ -96,14 +107,17 @@ export default function Navbar() {
           >
             <div className="px-6 py-4 flex flex-col gap-3">
               {NAV_LINKS.map((link) => (
-                <a
+                <Link
                   key={link.href}
                   href={link.href}
-                  onClick={() => setMobileOpen(false)}
+                  onClick={() => {
+                    handleNavScroll(link.href);
+                    setMobileOpen(false);
+                  }}
                   className="text-dark font-medium py-2 hover:text-gold transition-colors"
                 >
                   {link.label}
-                </a>
+                </Link>
               ))}
               <AnchorButton
                 theme="primary"

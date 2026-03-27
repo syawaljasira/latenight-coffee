@@ -36,7 +36,7 @@ export default function RootLayout({
     >
       <body className="min-h-full flex flex-col">
         <Navbar />
-        <main>{children}</main>
+        <main className="w-screen overflow-hidden">{children}</main>
         <Footer />
       </body>
     </html>

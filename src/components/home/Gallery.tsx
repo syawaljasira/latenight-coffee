@@ -8,7 +8,6 @@ const Gallery = () => {
   return (
     <section id="gallery" className="w-full py-20 lg:py-28 bg-light">
       <div className="max-w-7xl mx-auto px-6">
-        {/* Header */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -22,7 +21,7 @@ const Gallery = () => {
             Step into our world of warmth, aroma, and carefully curated spaces.
           </p>
         </motion.div>
-        {/* Grid */}
+
         <motion.div
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
@@ -44,8 +43,9 @@ const Gallery = () => {
                 fill
                 className="object-cover transition-transform duration-500 group-hover:scale-105"
                 sizes="(max-width: 1024px) 50vw, (min-width: 1025px) 25vw"
+                loading="eager"
               />
-              {/* Hover overlay */}
+
               <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-all duration-300" />
             </motion.div>
           ))}
