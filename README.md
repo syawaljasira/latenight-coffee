@@ -6,9 +6,9 @@ First, run the development server:
 npm run dev
 ```
 
-# Kopi Nusantara ☕
+# Late Night Coffee
 
-A modern, responsive landing page for Kopi Nusantara - a specialty coffee shop celebrating Indonesian coffee heritage.
+A modern, responsive landing page for Late Night Coffee - a specialty coffee shop celebrating Indonesian coffee heritage.
 
 ![Next.js](https://img.shields.io/badge/Next.js-14-black)
 ![TypeScript](https://img.shields.io/badge/TypeScript-5-blue)
@@ -17,18 +17,17 @@ A modern, responsive landing page for Kopi Nusantara - a specialty coffee shop c
 
 ## 📋 Table of Contents
 
-- [Kopi Nusantara ☕](#kopi-nusantara-)
+- [Late Night Coffee](#late-night-coffee)
   - [📋 Table of Contents](#-table-of-contents)
   - [🎯 Overview](#-overview)
   - [🛠️ Tech Stack](#️-tech-stack)
   - [🚀 Getting Started](#-getting-started)
     - [Prerequisites](#prerequisites)
     - [Installation](#installation)
-- [or](#or)
 
 ## 🎯 Overview
 
-Kopi Nusantara landing page showcases a premium coffee shop brand with:
+Late Night Coffee landing page showcases a premium coffee shop brand with:
 
 - Elegant visual design highlighting Indonesian coffee culture
 - Interactive menu display with coffee selections
