@@ -35,7 +35,7 @@ export default function Footer() {
               Crafting exceptional coffee from ethically sourced beans across
               the Indonesian archipelago since 2018.
             </p>
-            <div className="flex gap-3">
+            <div className="flex gap-3" data-testid="social-links">
               {SOCIAL_LINKS.map((link) => (
                 <Link
                   key={link.label}
