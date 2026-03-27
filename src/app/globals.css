@@ -9,17 +9,19 @@
   --color-secondary: #2d4a3e; /* green */
   --color-secondary-light: #3d6b5a; /* dark green */
   --color-light: #fafaf5;
-  --color-light-darken: #2c2c2c; /* color text */
-  --color-light-lighten: #6b6b6b; /* color text */
+  --color-dark: #2c2c2c; /* color text */
+  --color-gray: #6b6b6b; /* color text */
   --color-gold: #c8a96e;
   --color-gold-light: #d4b57a;
 
   --font-sans: var(--font-inter), "Inter", ui-sans-serif, system-ui, sans-serif;
-  --font-serif: var(--font-lora), "Lora", ui-serif, Georgia, Cambria, serif;
+  --font-serif: var(--font-dm-serif), ui-serif, Georgia, Cambria, serif;
 
-  --transition-fast: all 0.2s var(--ease-in-out);
-  --transition-base: all 0.3s var(--ease-in-out);
-  --transition-slow: all 0.6s var(--ease-in-out);
+  --transition-property-fast: all 0.2s var(--ease-in-out);
+  --transition-property-base: all 0.3s var(--ease-in-out);
+  --transition-property-slow: all 0.6s var(--ease-in-out);
+
+  --breakpoint-xs: 32rem;
 }
 
 html {
@@ -28,9 +30,17 @@ html {
 
 body {
   font-family: var(--font-sans);
-  color: var(--color-light-darken);
+  color: var(--color-dark);
   background: var(--color-light);
   overflow-x: hidden;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: var(--font-dm-serif), serif;
+  font-weight: 400;
 }
 
 button {
