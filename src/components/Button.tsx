@@ -1,6 +1,7 @@
 import "./Button.scss";
 import React from "react";
 import { motion, MotionProps } from "motion/react";
+import Link from "next/link";
 
 type themeType = "primary" | "outline" | "gold" | "outline-white" | "";
 
@@ -37,14 +38,14 @@ const AnchorButton = (props: aPropTypes) => {
     props;
 
   return (
-    <a href={href} {...otherProps}>
+    <Link href={href} {...otherProps}>
       <motion.div
         className={`btn inline-block px-6 py-3.5 transition-base rounded-full ${theme ? `btn-${theme}` : ""} ${className ?? ""}`}
         {...motionProps}
       >
         {children}
       </motion.div>
-    </a>
+    </Link>
   );
 };
 

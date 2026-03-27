@@ -16,7 +16,6 @@ const About = () => {
   return (
     <section id="about" className="w-full py-20 lg:py-28 bg-light">
       <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
-        {/* Images */}
         <motion.div
           initial={{ opacity: 0, x: -40 }}
           whileInView={{ opacity: 1, x: 0 }}
@@ -43,7 +42,7 @@ const About = () => {
             />
           </div>
         </motion.div>
-        {/* Text */}
+
         <motion.div
           initial={{ opacity: 0, x: 40 }}
           whileInView={{ opacity: 1, x: 0 }}
@@ -62,7 +61,6 @@ const About = () => {
             {ABOUT_FEATURES.map((item) => (
               <div key={item.title} className="flex gap-4 items-center">
                 <div className="w-20 h-20 bg-cream rounded-xl flex items-center justify-center shrink-0">
-                  {/* {iconList[item.icon]} */}
                   <Image
                     src={item.img}
                     alt={item?.description}
