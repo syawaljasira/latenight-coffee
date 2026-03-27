@@ -47,29 +47,6 @@ Late Night Coffee landing page showcases a premium coffee shop brand with:
 | **moment.js**          | Dynamic open/closed status based on business hours |
 | **Jest + RTL**         | Component testing                                  |
 
-latenight-coffee/
-├── public/
-│ └── assets/ # All image assets
-├── src/
-│ ├── app/
-│ │ ├── layout.tsx # Root layout (fonts, metadata)
-│ │ ├── page.tsx # Main landing page
-│ │ ├── not-found.tsx # Not found page
-│ │ └── globals.css # Global styles + Tailwind
-│ ├── components/
-│ │ ├── home/ # all components section for landing page
-│ │ ├── Navbar.tsx
-│ │ ├── Footer.tsx
-│ │ ├── Button.tsx
-│ │ └── NotFoundSection.tsx
-│ ├── utils/
-│ │ └── dummyData.ts # Menu items, testimonials, USP data, other..
-│ └── styles/
-│ ├── main.scss # another global SCSS
-├── components/tests/ # Component tests
-├── tailwind.config.ts
-└── package.json
-
 ## 🚀 Getting Started
 
 ### Prerequisites
@@ -84,21 +61,28 @@ latenight-coffee/
 ```bash
 git clone https://github.com/syawaljasira/latenight-coffee.git
 cd latenight-coffee
+```
 
 2. Install dependencies:
 
+```bash
 npm install
+```
 
-3. Run the development server:
+1. Run the development server:
 
+```bash
 npm run dev
+```
 
 4. Open http://localhost:3000 to view the site.
 
 Build for Production
 
+```bash
 npm run build
 npm start
+```
 
 ✨ Features
 
@@ -115,9 +99,11 @@ Fast Performance - Optimized images and Next.js features
 🧪 Testing
 Run component tests with Jest and React Testing Library:
 
+```bash
 npm test
 # or
 npm test:watch
+```
 
 Test coverage includes:
 
@@ -126,4 +112,3 @@ Test coverage includes:
 - Hero section
 
 - Footer component
-```
